@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import style from "./flight.module.css";
@@ -386,7 +387,7 @@ const Flight = () => {
                     >
                       <div className="accordion-body">
                         <div className="d-flex flex-row justify-content-between mt-2">
-                          <label for="garuda">Garuda Indonesia</label>
+                          <label htmlFor="garuda">Garuda Indonesia</label>
                           <input
                             className="form-check-input"
                             type="radio"
@@ -397,7 +398,7 @@ const Flight = () => {
                           />
                         </div>
                         <div className="d-flex flex-row justify-content-between mt-2">
-                          <label for="airasia">Air Asia</label>
+                          <label htmlFor="airasia">Air Asia</label>
                           <input
                             className="form-check-input"
                             type="radio"
@@ -408,7 +409,7 @@ const Flight = () => {
                           />
                         </div>
                         <div className="d-flex flex-row justify-content-between mt-2">
-                          <label for="lionair">Lion Air</label>
+                          <label htmlFor="lionair">Lion Air</label>
                           <input
                             className="form-check-input"
                             type="radio"
@@ -429,7 +430,7 @@ const Flight = () => {
         <div className={style.basisRight}>
           {data ? (
             data.map((item) => (
-              <div className={style.brFlight}>
+              <div key={item.id} className={style.brFlight}>
                 <div className={style.brSelect}>
                   <div className={style.brfHead}>
                     <p className={style.brfhSelect}>Select Ticket</p>
